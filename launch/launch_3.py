@@ -86,10 +86,10 @@ def generate_launch_description():
                 # Pega dados de '/camera_rgb/image_raw' (Ignition) e publica em '/camera_rgb/image_raw' (ROS 2)
                 # Formato: "ROS2_TOPIC@ROS2_MSG_TYPE@IGNITION_MSG_TYPE"
                 # Se o nome do tópico Ignition for o mesmo do ROS 2, não precisa de remapping explícito aqui.
-                '/camera_rgb/image_raw@sensor_msgs/msg/Image@ignition.msgs.Image',
+                '/camera@sensor_msgs/msg/Image@ignition.msgs.Image',
                 
                 # Pega dados de '/camera_rgb/camera_info' (Ignition) e publica em '/camera_rgb/camera_info' (ROS 2)
-                '/camera_rgb/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo'
+                'camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo'
             ],
             # Remova a seção 'remappings' para a câmera, pois os nomes já batem!
             # remappings=[
